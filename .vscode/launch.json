@@ -1,0 +1,55 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run in VS Code Dev Container",
+            "request": "launch",
+            "mainClass": "com.company.Main.ApplicationServer",
+            "projectName": "paste",
+            "env": {
+                "DDL_CONFIG": "create-drop",
+                "MYSQL_HOST": "localhost",
+		        "MYSQL_DATABASE": "app_db",
+		        "MYSQL_USERNAME": "app_user",
+		        "MYSQL_PASSWORD": "app_password",
+		        "MYSQL_PORT": "3306"
+            },
+            "vmArgs": ["-Dspring.profiles.active=dev"]
+        },
+        {
+            "type": "java",
+            "name": "Launch ApplicationServer",
+            "request": "launch",
+            "mainClass": "com.company.Main.ApplicationServer",
+            "projectName": "paste",
+            "env": {
+                "DDL_CONFIG": "create-drop",
+                "MYSQL_HOST": "localhost",
+		        "MYSQL_DATABASE": "app_db",
+		        "MYSQL_USERNAME": "app_user",
+		        "MYSQL_PASSWORD": "app_password",
+		        "MYSQL_PORT": "3306"
+            },
+            "vmArgs": ["-Dspring.profiles.active=dev"]
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "env": {
+                "DDL_CONFIG": "create-drop",
+                "MYSQL_HOST": "localhost",
+		        "MYSQL_DATABASE": "app_db",
+		        "MYSQL_USERNAME": "app_user",
+		        "MYSQL_PASSWORD": "app_password",
+		        "MYSQL_PORT": "3306"
+            },
+            "vmArgs": ["-Dspring.profiles.active=dev"]
+        }
+    ]
+}
